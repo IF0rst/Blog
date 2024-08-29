@@ -1,0 +1,58 @@
+:root {
+    --text_color_main_1: #d14200;
+    --text_color_h1: #1f1f1f;
+    --text_color_p: #1c1c1c;
+    --text_color_bold: #313131;
+    --color_section_image: #faeae2;
+}
+
+body{
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    -webkit-box-shadow: 0px 2px 9px 5px rgba(0,0,0,0.54);
+    box-shadow: 0px 2px 9px 5px rgba(0, 0, 0, 0.03);
+
+    > nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        max-width: 1200px;
+
+        > a {
+            font-size: 4rem;
+            text-decoration: none;
+            color: var(--text_color_main_1);
+        }
+
+        > ul {
+            display: flex;
+            gap: 2rem;
+
+            > li {
+                list-style: none;
+                font-family: Bahnschrift;
+
+                >.selected {
+                    color: var(--text_color_main_1);
+                }
+
+                >a {
+                    text-decoration: none;
+                    color: #1c1c1c;
+                }
+            }
+
+        }
+    }
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+}
