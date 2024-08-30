@@ -60,5 +60,12 @@ main{
             justify-content: center;
         }
     }
+
+    #langages{
+        img{
+            max-width: 5rem;
+            margin-right: 1rem;
+        }
+    }
 }
 
