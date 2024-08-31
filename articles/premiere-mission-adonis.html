@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - À propos</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="../index.html">Mon Blog</a>
+        <ul>
+            <li><a href="../index.html">à propos</a></li>
+            <li><a href="../contact.html">contact</a></li>
+            <li><a class="selected" href="../articles.html">mes articles</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="section-image">
+        <div>
+            <img src="../images/formations-etudis.png" alt="Entrée du Groupe Adonis">
+        </div>
+        <div>
+            <h1>Ma première mission: ajout des formations et modifications des templates</h1>
+            <p>Dans cet article, je vous raconte comment s'est déroulée ma première mission au sein du groupe Adonis.</p>
+        </div>
+    </div>
+    <div class="section">
+        <h1>Introduction</h1>
+        <p>Après mon intégration au sein du <b>Groupe Adonis</b>, j'ai été rapidement sollicité pour prendre en charge ma première mission, qui consistait à intégrer les 24 nouvelles formations <b>Etudis</b> directement sur le site web officiel, accessible à l'adresse <a href="https://www.etudis.net/formations">www.etudis.net/formations</a>.<br><br> Cette mission impliquait un processus d'intégration complet, incluant non seulement l'ajout du contenu des formations, mais aussi la coordination avec les équipes responsables pour obtenir tous les éléments nécessaires, tels que les images associées à chaque formation et le programme officiel détaillé.<br><br> Je vais maintenant vous présenter en détail le processus que j'ai suivi pour mener à bien cette mission, ainsi que les différentes actions réalisées pour garantir que le contenu soit mis en ligne de manière optimale et conforme aux attentes.</p>
+        <h1>Détails de la mission</h1>
+        <h2>Accès au repository et méthodologie de travail</h2>
+        <p>Dans un premier temps, un développeur de l'équipe m'a donné l'accès au repository du site web, ce qui m'a permis de travailler en local sur mon environnement de développement. Les procédures internes nécessitaient que toutes les modifications soient d'abord effectuées sur la branche develop.<br><br> Une fois les ajustements terminés, une vérification rigoureuse était indispensable avant de pouvoir fusionner les changements dans la branche master, qui est celle utilisée pour héberger la version en ligne du site web. Ce processus garantissait que tout le contenu ajouté était complet et exempt de bugs avant d'être déployé en production.</p>
+        <h2>Compréhension du système de routage et des fichiers JSON</h2>
+        <p>Une fois familiarisé avec le repository et la méthodologie de travail, le développeur m'a expliqué le fonctionnement du système de routage en PHP, un système qu'il avait lui-même conçu avec l'aide d'un alternant cherchant à se professionnaliser dans le développement front-end web.<br><br> Ce système permettait de gérer la navigation entre les différentes pages du site. J'ai alors pu accéder aux contenus des formations, qui étaient essentiellement stockés sous forme de fichiers JSON. Ces fichiers étaient ensuite interprétés et mis en forme par un programme PHP lorsque l'utilisateur accédait à une formation spécifique. Chaque fichier JSON contenait toutes les informations nécessaires, telles que le nom de la formation, la description, les différentes sections, les images associées, etc.</p>
+        <h2>Ajout de nouvelles formations via un formulaire interne</h2>
+        <p>Pour ajouter une nouvelle formation sur le site, il était nécessaire de passer par un site web interne à l'entreprise, qui contenait un formulaire dédié à cet effet. Ce formulaire permettait d'ajouter les informations de base d'une formation directement dans la base de données SQL, garantissant ainsi que le site web pouvait établir le lien entre les données en base et les fichiers de contenu JSON.<br><br> Une fois la formation ajoutée en base de données, je devais ensuite accéder à un second formulaire pour ajouter les différentes formules associées à chaque formation, comme les différents niveaux ou options disponibles.</p>
+        <img src="../images/form_adonis.webp">
+        <p>* Voici à quoi ressemble le formulaire de création de formule.</p>
+        <h2>Collecte du contenu auprès du secrétariat</h2>
+        <p>Concernant le contenu des formations, je me suis rendu au secrétariat pour demander les programmes officiels ainsi que les référentiels de chaque formation, sans oublier les images qui devaient être intégrées sur le site. Une fois tout le matériel récupéré, j'ai pu commencer la création des formations dans la base de données, ainsi que l'ajout des formules. Ce travail s'est avéré assez laborieux, avec l'intégration de 24 nouvelles formations et l'ajout de 96 formules, un processus qui s'est révélé plus complexe que prévu.</p>
+        <h2>Modification des fichiers JSON pour afficher les référentiels</h2>
+        <p>Pour afficher correctement le contenu des référentiels sur les pages web, il m'a suffi de modifier les fichiers JSON jusqu'à obtenir un résultat conforme aux attentes et bien structuré pour les utilisateurs.</p>
+        <h1>Difficultés rencontrées</h1>
+        <h2>Complexité des processus manuels</h2>
+        <p>Cependant, tout n'a pas été simple. L'une des principales difficultés rencontrées était de rester organisé lors de la création des formations, car celles-ci devaient être très précises, avec des prix fluctuants en fonction des formules.<br><br> De plus, j'ai eu quelques complications avec l'ajout manuel des fichiers JSON, qui étaient normalement générés automatiquement par une tâche CRON exécutée sur le serveur. N'ayant pas accès à cette automatisation, j'ai dû réaliser cette tâche à la main en m'appuyant sur les anciennes formations comme modèle.</p>
+        <h1>Retour d'expérience</h1>
+        <h2>Ressenti global sur la mission</h2>
+        <p>Si je devais donner mon avis sur cette mission, je dirais qu'elle a été longue et parfois frustrante. Étant donné que c'était ma première tâche après mon intégration, j'espérais travailler davantage sur du code plutôt que de passer tant de temps sur des tâches répétitives d'intégration de contenu. Cela a laissé une impression mitigée dès le début de mon expérience.</p>
+        <h1>Finalisation de la mission</h1>
+        <h2>Modification du template de la page et création de bannières</h2>
+        <p>Enfin, une fois les formations correctement ajoutées sur le site, j'ai également dû modifier le template de la page /formations pour affecter un ordre d'affichage spécifique aux formations, en mettant en avant certains secteurs via du code PHP.<br><br> J'ai aussi ajouté des bannières pour illustrer à quel secteur appartenait chaque formation. Pour cela, j'ai utilisé le logiciel Inkscape, un outil de dessin vectoriel gratuit, pour concevoir plusieurs versions des bannières. Après plusieurs itérations, j'ai présenté les modèles à mon employeur, qui a choisi une version finale. Je me suis alors attelé à intégrer cette bannière sur le site en utilisant du HTML et du CSS.</p>
+        <img src="../images/banner_added.png">
+        <p>* Résultat final</p>
+    </div>
+</main>
+</body>
+</html>
